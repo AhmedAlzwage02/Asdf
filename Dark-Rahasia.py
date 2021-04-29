@@ -25,7 +25,7 @@ sys.setdefaultencoding('utf8')
 br = mechanize.Browser()
 br.set_handle_robots(False)
 br.set_handle_refresh(mechanize._http.HTTPRefreshProcessor(),max_time=1)
-br.addheaders = [('User-Agent','Opera/9.80 (Android; Opera Mini/28.0.2254/85. U; id) Presto/2.12.423 Version/12.16')]
+br.addheaders = [('User-Agent','Opera/9.80 (Android; Opera Mini/31.0.2254/85. U; id) Presto/2.12.423 Version/12.16')]
 
 #-Keluar-#
 def keluar():
@@ -154,8 +154,8 @@ def login():
 		url = br.geturl()
 		if 'save-device' in url:
 			try:
-				sig= 'api_key=882a8490361da98702bf97a021ddc14dcredentials_type=passwordemail='+id+'format=JSONgenerate_machine_id=1generate_session_cookies=1locale=en_USmethod=auth.loginpassword='+pwd+'return_ssl_resources=0v=1.062f8ce9f74b12f84c123cc23437a4a32'
-				data = {"api_key":"882a8490361da98702bf97a021ddc14d","credentials_type":"password","email":id,"format":"JSON", "generate_machine_id":"1","generate_session_cookies":"1","locale":"en_US","method":"auth.login","password":pwd,"return_ssl_resources":"0","v":"1.0"}
+				sig= 'api_key=882a8490361da98702bf97a021ddc14dcredentials_type=passwordemail='+id+'format=JSONgenerate_machine_id=1generate_session_cookies=1locale=ar_ARmethod=auth.loginpassword='+pwd+'return_ssl_resources=0v=1.062f8ce9f74b12f84c123cc23437a4a32'
+				data = {"api_key":"882a8490361da98702bf97a021ddc14d","credentials_type":"password","email":id,"format":"JSON", "generate_machine_id":"1","generate_session_cookies":"1","locale":"ar_AR","method":"auth.login","password":pwd,"return_ssl_resources":"0","v":"1.0"}
 				x=hashlib.new("md5")
 				x.update(sig)
 				a=x.hexdigest()
